@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GLC HR Dashboard
+
+Live demo: [GLC HR Dashboard on Vercel](https://glc-task.vercel.app/)
+
+## Screenshots
+
+![Login Page](login.png)  
+
+###
+
+![Dashboard](dashboard.png)  
+
+###
+
+![Employees Management](employees.png)  
+
+###
+
+![Departments Management](departments.png)  
+
+###
+
+![Activity Log](activity.png)  
+
+
+## Project Overview
+
+This project is a fully functional **HR Dashboard** built with **React** and **Next.js**, without any backend.  
+All data is handled locally using **JSON files, LocalStorage**, and **in-memory mock services**.  
+
+The dashboard includes:
+
+- **Local Authentication:** Users login with predefined credentials, protected routes based on role, and persisted auth state via Zustand and LocalStorage.  
+- **Dashboard:** Displays total employees, total departments, total salary, charts of employees per department, and a recent activity log stored locally.  
+- **Employees Management:** Full CRUD (Create, Read, Update, Delete) functionality with forms, validation, pagination, sorting, search with debounce, and soft delete with confirmation modals.  
+- **Departments Management:** List, add, edit, delete departments, and show employee count per department.  
+- **Activity Log:** Tracks all changes in employees and departments locally with pagination and filtering.  
+- **Global Requirements:** Professional project structure, reusable components, custom hooks, responsive UI, and dark/light mode.  
+
+### Bonus Features Implemented
+- Project is fully **deployable on Vercel**.  
+- Optional **CSV export** for activity logs implemented.  
+- Local JSON/LocalStorage acts like a mock API for all data operations.  
+
+## User Roles & Access
+
+| Role | Capabilities |
+|------|-------------|
+| Admin | Full access to all features including employees and departments CRUD, activity logs, and dashboard charts |
+| HR Manager | Can manage employees and departments, view dashboard and activity logs |
+| Employee | Can view dashboard stats and activity logs only |
+
+Predefined credentials for testing:
+
+| Email | Password | Role |
+|-------|----------|------|
+| admin@example.com | 123456 | Admin |
+| hrmanager@example.com | 123456 | HR Manager |
+| employee@example.com | 123456 | Employee |
+
+## Tech Stack
+
+- **Next.js** for routing and rendering  
+- **React** for UI  
+- **TypeScript** for type safety  
+- **TailwindCSS + ShadCN UI** for styling  
+- **Zustand** for state management  
+- **Recharts** for charts  
+- **React Hook Form + Zod** for form validation  
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm install
