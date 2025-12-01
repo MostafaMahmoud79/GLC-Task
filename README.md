@@ -55,8 +55,8 @@ Predefined credentials for testing:
 | Email | Password | Role |
 |-------|----------|------|
 | admin@example.com | 123456 | Admin |
-| hrmanager@example.com | 123456 | HR Manager |
-| employee@example.com | 123456 | Employee |
+| manager@example.com | 123456 | HR Manager |
+| dev@example.com | 123456 | Employee |
 
 ## Tech Stack
 
